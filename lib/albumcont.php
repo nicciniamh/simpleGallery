@@ -1,4 +1,16 @@
 <?php
+function albumCounts($a) {
+	$icnt = count($a->images);
+	$acnt = 1; //1 + count($a->children);
+	if(count($a->children)) {
+		foreach($a->children as $c) {
+			list($ic,$ac) = albumCounts($c);
+			$icnt += $ic;
+			$acnt += $ac;
+		}
+	}
+	return array($icnt,$acnt);
+}
 class image {
 	public $name;
 	public $path;

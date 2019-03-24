@@ -49,7 +49,13 @@ if(file_exists($detail)) readfile($detail);
     foreach($album->children as $c) {
       $apath = $c->path; //urldecode($album->path . "/" . $c->path);
       $cnt = count($c->images);
-      $caption = "{$c->title}, {$cnt} images.";
+      list($icnt,$acnt) = albumCounts($c);
+      if($acnt > 1) {
+        $al = "albums";
+      } else {
+        $al = "album";
+      }
+      $caption = "{$c->title}, {$icnt} images, in {$acnt} {$al}";
       echo "<a class=\"tent aent\" title=\"{$c->title}\" ";
       echo "href=\"${abase}/album.php?album={$apath}\">";
       echo "<img src=\"{$c->images[0]->thumb}\" alt=\"{$c->title}\" title=\"{$c->title}\">";
