@@ -20,6 +20,24 @@ echo "<script src=\"{$config['base_dir']}/lib/sgi.js\"></script>\n";
 echo "<link rel=\"stylesheet\" href=\"{$config['base_dir']}/js/jquery.colorbox.css\" />\n";
 echo "<link rel=\"stylesheet\" href=\"{$config['base_dir']}/lib/style2.css\" />\n";
 echo "<title>{$album->title}</title>\n";
+
+$ovlCssText = <<<EOT
+#cboxOverlay{background:url({$config['base_dir']}/js/colorbox-images/overlay.png) repeat 0 0; opacity: 0.9; filter: alpha(opacity = 90);}
+    #cboxTopLeft{width:21px; height:21px; background:url({$config['base_dir']}/js/colorbox-images/controls.png) no-repeat -101px 0;}
+    #cboxTopRight{width:21px; height:21px; background:url({$config['base_dir']}/js/colorbox-images/controls.png) no-repeat -130px 0;}
+    #cboxBottomLeft{width:21px; height:21px; background:url({$config['base_dir']}/js/colorbox-images/controls.png) no-repeat -101px -29px;}
+    #cboxBottomRight{width:21px; height:21px; background:url({$config['base_dir']}/js/colorbox-images/controls.png) no-repeat -130px -29px;}
+    #cboxMiddleLeft{width:21px; background:url({$config['base_dir']}/js/colorbox-images/controls.png) left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url({$config['base_dir']}/js/colorbox-images/controls.png) right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url({$config['base_dir']}/js/colorbox-images/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url({$config['base_dir']}/js/colorbox-images/border.png) 0 -29px repeat-x;}
+        #cboxLoadingOverlay{background:url({$config['base_dir']}/js/colorbox-images/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url({$config['base_dir']}/js/colorbox-images/loading.gif) no-repeat center center;}
+        #cboxPrevious{position:absolute; bottom:0; left:0; background:url({$config['base_dir']}/js/colorbox-images/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url({$config['base_dir']}/js/colorbox-images/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose{position:absolute; bottom:0; right:0; background:url({$config['base_dir']}/js/colorbox-images/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+EOT;
+echo "<style>\n${ovlCssText}\n</style>\n";
 ?>
 <style>
   /*
