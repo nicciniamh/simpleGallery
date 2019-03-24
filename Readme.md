@@ -45,7 +45,7 @@ The basic operation of thumbnailing is that the server looks for the image in th
 ## Creating an Album
 1. Make a directory under albums with the name of the album you want. It may also be made in an existing album. 
 2. Create a file called album.dsc with single line describing the album. 
-3. For each file add a .dsc file descrribing the pictures. e.g.: DSC_2341.jpg would be descrubed by DSC_2341.jpg.dsc
+3. For each file add a .dsc file descrribing the pictures. e.g.: DSC_2341.jpg would be descrubed by DSC_2341.jpg.dsc (If no corresponding .dsc file exists for an image, the gallery title is used.)
 4. That's it!
 
 It's a good idea to load your new gallery in a web browser to have the thumbnailer create thumbnails.
