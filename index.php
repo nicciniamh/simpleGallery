@@ -51,15 +51,7 @@ if(isset($config['subheading'])) {
 foreach($alist as $a) {
 	$gpath = $a->path;
 	$gname = ucfirst(basename($a->path));
-	$acnt = 1;
-	$icnt = count($a->images);
-	foreach($a->children as $c) {
-		$acnt ++;
-		foreach($c->children as $x) {
-			$acnt++;
-			$icnt += count($x->images);
-		}
-	}
+	list($icnt,$acnt) = albumCounts($a);
 	if($acnt >1) 
 		$al = "albums";
 	else 
