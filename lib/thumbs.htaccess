@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+#    RewriteRule ^(.*)\.(gif|jpg|png|jpeg)$ ../thumb.php?$1.$2 [L,NC]
+    RewriteRule ^(.*)$ ../thumb.php?i=$1 [L,NC]
+
+</IfModule>
