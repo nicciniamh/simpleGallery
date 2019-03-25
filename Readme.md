@@ -16,8 +16,21 @@ Simple Gallery is a simple photograpic gallery that supports any number of sub-a
 * jquery-colorbox (image display and slideshow) [http://www.jacklmoore.com/colorbox/](http://www.jacklmoore.com/colorbox/)
 * jquery-touchSwipe (for touch events) [https://github.com/mattbryson/TouchSwipe-Jquery-Plugin](https://github.com/mattbryson/TouchSwipe-Jquery-Plugin)
 
+jQuery and the plugins are expected to be installed in the js/ directory. 
+
+This is the contents of the js/ folder:
+
+colorbox-images 
+
+	colorbox-master   
+	jquery-3.3.1.min.js
+	jquery.colorbox.css
+	jquery.colorbox.js
+	jquery.touchSwipe.min.js
+
+
 ### Colorbox Notes
-Colorbox is distributed in a folder. To achieve what I have, I have it installed in *root*/js as jquery.colorbox.js and the images and css files are moved to js from the example folders. 
+Colorbox is distributed in a folder. To achieve what I have, I have it installed in **root/js** as **jquery.colorbox.js** and the images and css files are moved to **js/** from the example folders. 
 
 Other jquery code can be downloaded to the js/ folder. 
 
